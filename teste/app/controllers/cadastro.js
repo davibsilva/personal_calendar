@@ -20,7 +20,7 @@ module.exports.usuario_salvar = (app, req, res) => {
     const connection = app.config.dbConnection;
     const usuariosModel = new app.app.models.UsuariosDAO(connection);
 
-    usuariosModel.inserirUsuario(dadosForm);
+    usuariosModel.inserirUsuario(dadosForm, res);
 }
 
 

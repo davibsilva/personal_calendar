@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <form accept-charset="UTF-8" role="form" class="form-signin" action="/calendario" method="POST">
+                        <form accept-charset="UTF-8" role="form" class="form-signin">
                             <fieldset>
 
                                 <h4>Clique em selecionar data</h4>
@@ -38,11 +38,13 @@
                 </div>
 
             </div>
-            <div class="col-md-3 col-md-offset-4">
-                <input class="btn btn-primary btn-block" type="submit" id="entrar" value="Escolher Data">
-                <br>
-                <button class="btn btn-success btn-block" type="submit">Confirmar</button>
-            </div>
+            <form accept-charset="UTF-8" role="form" class="form-signin" action="/inserirData" method="POST">
+                <div class="col-md-3 col-md-offset-4">
+                    <input class="btn btn-primary btn-block" id="calendario" name="data_usuario" value="Escolher Data">
+                    <br>
+                    <button class="btn btn-success btn-block" type="submit">Confirmar</button>
+                </div>
+            </form>
 
         </div>
     </div>
@@ -51,7 +53,7 @@
     <script>
         $(function () {
 
-            $("#entrar").datepicker({
+            $("#calendario").datepicker({
                 showButtonPanel: true
             });
         });
