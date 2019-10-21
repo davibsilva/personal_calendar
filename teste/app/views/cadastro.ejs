@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cadastro de usuários</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/personal_calendar/app/public/css/style.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <script src="/personal_calendar//app/public/js/jquery.js" > </script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row vertical-offset-80">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row-fluid user-row">
+                            <h2>Cadastro de usuários</h2>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form accept-charset="UTF-8" role="form" class="form-signin" action="/cadastro" method="POST">
+                            <fieldset>
+                                <label for="email">E-mail</label>
+                                <input class="form-control" placeholder="E-mail" id="email" name="email" type="email">
+                                <br>
+                                <label for="senha">Senha</label>
+                                <input class="form-control" placeholder="Senha" id="senha" name="senha" type="password">
+                                <br>
+                                <div class="col-md-6">
+                                    <button class="btn btn-success" type="submit" id="cadastrar">Cadastrar</button>
+                                    <% if(validacao.length > 0) { %>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="alert alert-danger">
+                                                    <strong>Atenção!</strong>
+                                                    <ul>
+                                                        <% for(var i = 0; i < validacao.length; i++) { %>
+                                                            <li><%= validacao[i].msg %></li>
+                                                        <% } %>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5 ">
+                                        <form role="form" class="form-signin" action="/consulta" method="GET">
+                                            <button class="btn btn-primary" type="submit" id="consultar">Consultar</button>
+                                        </form> 
+                                </div>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "personal_calendar",
+  "version": "1.0.0",
+  "description": "Calendario pessoal eletronico",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawidvinicius/personal_calendar.git"
+  },
+  "author": "Davi Vinícius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dawidvinicius/personal_calendar/issues"
+  },
+  "homepage": "https://github.com/dawidvinicius/personal_calendar#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^2.20.8",
+    "mongodb": "^2.2.9",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.4"
+  }
+}

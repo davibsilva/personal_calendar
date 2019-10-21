@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Calendário</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/personal_calendar/app/public/css/style.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row vertical-offset-80">
+            <div class="col-md-5 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row-fluid user-row">
+                            <h2>Escolha a data desejada</h2>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form accept-charset="UTF-8" role="form" class="form-signin" action="/calendario" method="POST">
+                            <fieldset>
+
+                                <h4>Clique em selecionar data</h4>
+                                <br>
+                                <h4>Para salvar a data escolhida clique em confirmar</h4>
+                                <br>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-md-offset-4">
+                <input class="btn btn-primary btn-block" type="submit" id="entrar" value="Escolher Data">
+                <br>
+                <button class="btn btn-success btn-block" type="submit">Confirmar</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    <script>
+        $(function () {
+
+            $("#entrar").datepicker({
+                showButtonPanel: true
+            });
+        });
+    </script>
+</body>
+
+</html>
